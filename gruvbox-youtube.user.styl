@@ -1,0 +1,87 @@
+/* ==UserStyle==
+@name           GruvBox - Youtube
+@namespace      github.com/Xedecimal/userstyles
+@version        1.0.5
+@description    Youtube... Gruvbox style.
+@preprocessor   stylus
+@author         Xedecimal
+@license        WTFPL
+@updateURL      https://github.com/khanghugo/userstyles/raw/master/gruvbox-youtube.user.styl
+@homepageURL    https://github.com/Xedecimal/userstyles
+@var color color-text           "Text"                  #FBF1C7
+@var color color-text-dark      "Text Dark"             #A89984
+@var color color-back           "Background"            #282828
+@var color color-back-dark      "Background Dark"       #1D2021
+@var color color-back-light     "Background Bright"     #3C3836
+@var color color-highlight      "Highlight"             #FB4934
+@var color color-notification   "Notification"          #B8BB26
+@var color color-things         "Things that aren't text" "#8ec07c"
+@var color color-things-dark    "Things that aren't text darken" "#689d6a"
+@var color color-things-contrast "Things contrast" "#fe8019"
+@var color color-things-contrast-dark "Things contrast" "#d65d0e"
+@var color color-things-contrast2 "Things contrast" "#83a598"
+@var color color-things-contrast2-dark "Things contrast" "#458588"
+@var color color-things-contrast3 "Things contrast" "#fabd2f"
+@var color color-things-contrast3-dark "Things contrast" "#d79921"
+@var color color-things-contrast4 "Things contrast" "#b8bb26"
+@var color color-things-contrast4-dark "Things contrast" "#98971a"
+@var color color-things-contrast5 "Things contrast" "#d3869b"
+@var color color-things-contrast5-dark "Things contrast" "#b16286"
+==/UserStyle== */
+
+@-moz-document domain("youtube.com")       
+    
+    // video description
+    body, ytd-app, ytd-masthead, #guide-content.ytd-app, #columns.ytd-watch-flexy, ytd-browse[page-subtype="channels"], .content.ytd-video-secondary-info-renderer, ytd-app[is-watch-page], ytd-watch-flexy
+        color: color-text
+        background: color-back
+    
+            
+    // video title by side bar and description "show more"
+    a, h3.ytd-compact-video-renderer, .more-button.ytd-video-secondary-info-renderer, .less-button.ytd-video-secondary-info-renderer, .title.ytd-guide-entry-renderer
+        color: color-things
+
+        
+    // title and comment count
+    #title.ytd-shelf-renderer, .title.ytd-video-primary-info-renderer, #upnext.ytd-compact-autoplay-renderer, yt-formatted-string.ytd-comments-header-renderer, #channel-title.ytd-c4-tabbed-header-renderer
+        color: color-things
+
+    // comment "days ago"
+    yt-formatted-string[has-link-only_]:not([force-default-style]) a.yt-simple-endpoint.yt-formatted-string
+        color: color-text-dark
+    
+    // comment text
+    #content-text.ytd-comment-renderer
+        color: color-text
+    
+    // author text    
+    #author-text.yt-simple-endpoint.ytd-comment-renderer
+        color: color-things
+    // youtube icon, dislike, like, checkmark, love, "view replies" arrow and literaly every icon
+    // if you want to change something, change this one first
+    .yt-icon
+        color: color-text-dark
+    
+        
+    // "add a public comment"
+    #simplebox-placeholder.ytd-comment-simplebox-renderer
+        color: color-text-dark
+        
+    // like number    
+    #action-buttons.ytd-comment-renderer
+        color: color-text
+        
+    html:not(.style-scope)[dark], :not(.style-scope)[dark]
+        // links and "view more comment" and "Reply" button
+        --yt-spec-call-to-action: color-things-contrast2
+        
+        // secondary text like sub count, views, date, and "reply button"
+        --yt-spec-text-secondary: color-text-dark
+        
+        // "share" "save", "like count", "sort by"
+        --yt-spec-text-primary: color-text
+        
+        // sub button
+        --yt-spec-brand-button-background: color-things-contrast
+        --yt-spec-brand-link-text: color-text
+        
