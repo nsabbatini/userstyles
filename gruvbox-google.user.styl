@@ -1,0 +1,145 @@
+/* ==UserStyle==
+@name           GruvBox - Google
+@namespace      github.com/nsabbatini/userstyles
+@version        1.0.0
+@description    Google... Gruvbox style.
+@preprocessor   stylus
+@author         nsabbatini
+@license        WTFPL
+@updateURL      https://github.com/nsabbatini/userstyles/raw/main/gruvbox-google.user.styl
+@homepageURL    https://github.com/nsabbatini/userstyles
+@var color gruv-bg0_h        "Background 0h" #1d2021
+@var color gruv-bg0_s        "Background 0s" #32302f
+
+@var color gruv-bg0          "Background 0" #282828
+@var color gruv-bg1          "Background 1" #3c3836
+@var color gruv-bg2          "Background 2" #504945
+@var color gruv-bg3          "Background 3" #665c54
+@var color gruv-bg4          "Background 4" #7c6f64
+
+@var color gruv-fg0-ww       "Background 0 weaker" #fbf1c78a
+@var color gruv-fg0-w        "Background 0 weak"   #fbf1c7bd
+
+@var color gruv-fg0          "Foreground 0" #fbf1c7
+@var color gruv-fg1          "Foreground 1" #ebdbb2
+@var color gruv-fg2          "Foreground 2" #d5c4a1
+@var color gruv-fg3          "Foreground 3" #bdae93
+@var color gruv-fg4          "Foreground 4" #a89984
+
+@var color gruv-gray         "Gray"         #928374
+
+@var color gruv-red-light    "Red Light"    #fb4934
+@var color gruv-red-dark     "Red Dark"     #cc241d
+
+@var color gruv-orange-light "Orange Light" #fe8019
+@var color gruv-orange-dark  "Orange Dark"  #d65d0e
+
+@var color gruv-yellow-light "Yellow Light" #fabd2f
+@var color gruv-yellow-dark  "Yellow Dark"  #d79921
+
+@var color gruv-green-light  "Green Light"  #b8bb26
+@var color gruv-green-dark   "Green Dark"   #98971a
+
+@var color gruv-aqua-light   "Aqua Light"   #8ec07c
+@var color gruv-aqua-dark    "Aqua Dark"    #689d6a
+
+@var color gruv-blue-light   "Blue Light"   #83a598
+@var color gruv-blue-dark    "Blue Dark"    #458588
+
+@var color gruv-purple-light "Purple Light" #d3869b
+@var color gruv-purple-dark  "Purple Dark"  #b16286
+
+==/UserStyle== */
+
+
+
+@-moz-document url-prefix("https://www.google.com"), domain("https://www.google.com.br") {
+
+    body, .appbar, .sfbg, .yg51vc, .U3A9Ac {
+        color: gruv-fg0-w !important;
+        /* background: gruv-bg0 !important; */
+    }
+
+    .vZFyxc {
+        color: gruv-aqua-dark !important;
+        /* background: gruv-bg0 !important; */
+    }
+
+    /* text */
+    .gLFyf, cite, .yXK7lf em, .cXedhc, .f3LoEf, .qzEoUe, .dyjrff, .yDYNvb.lyLwlc, .Uroaid, .s75CSd, .ZkkK1e, .hb8SAc, .wwUB2c, .mDj5wd, .eQ47Fc, .hdtb-mn-hd, .GI74Re, .U1hlv, .fLciMb, .gb_yc svg, .IsZvec { 
+        color: gruv-fg0-w !important; 
+    }
+
+    /* weaker text */
+    .WZ8Tjf, .Zg1NU, .P7xzyf, .TXwUJf, .P1usbc, .z8gr9e, .LHJvCe, .Od5Jsd, .FzCfme, .hMJ0yc, .cwUqwd, .ZYHQ7e, .YrbPuc, .qHx7jd, .ZE0LJd, .B58ezc, #Wprf1b, .b0KoTc, .YkS8D .N6jJud {
+        color: gruv-fg0-ww !important;       
+    }
+
+    /* subtitles */
+    .wUrVib, .EZRelc, .RES9jf, .dbg0pd, .O3JH7, .GmE3X, .Z0LcW, .eJ7tvc, .kno-ecr-pt, #rhs .nGydZ .garHBe {
+        color: gruv-fg1;
+    }
+
+    /* Pressed top menu */
+    .hdtb-mitem.hdtb-msel, .rQEFy {
+        color: gruv-aqua-light !important;
+    }
+
+    .YTDezd {
+        background: gruv-aqua-light !important;
+    }
+
+    .rQEFy {
+        border-bottom: 3px solid gruv-aqua-light !important;
+    }
+
+    /* links */
+    a, .ynAwRc, .GOE98c, .t2vtad, .wM6W7d, .w8qArf .fl, .SW5pqf, .k4DMHe .xXEKkb, .kno-ftr.rpBMYb, .y355M, .CEMjEf,  {
+        color: gruv-aqua-dark !important;
+    }
+
+    a:visited, a:visited * {
+        color: gruv-fg0-w !important;
+    }
+
+    /* Link to video segment */
+    .vfxGNc {
+        color: gruv-aqua-light !important;
+    }
+
+    /* menu items */
+    .cF4V5c g-menu-item a {
+        color: gruv-fg0-w !important;
+    }
+
+    /* text boxes */
+    .MXl0lf, .RNNXgb, .k8XOCe {
+        /* background: gruv-bg0_h !important; */
+        border: 1px solid gruv-bg2 !important;
+    }
+
+    /* text inside figures */
+    .pu1VWe {
+        color: #000 !important;
+    }
+
+    /* line separating top bar */
+    .GLcBOb {
+        border-bottom: 1px solid gruv-bg4 !important;
+    }
+
+    /* border lines separating rows */
+    .oySJpc, .RzdJxc, .aNytqb .rKnmn, .wYWDAd {
+        border-top: 1px solid gruv-bg2 !important;
+    }
+
+    /* lines separating sections */
+    .akqY6, .pb5vrc {
+        /* background: gruv-bg2 !important; */
+    }
+
+    /* footer text */
+    .KwU3F, .xSQxL {
+        color: gruv-aqua-light !important;
+    }
+}
