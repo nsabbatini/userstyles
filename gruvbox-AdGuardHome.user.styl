@@ -1,63 +1,65 @@
 /* ==UserStyle==
 @name           GruvBox - AdGuardHome
 @namespace      github.com/nsabbatini/userstyles
-@version        1.1.2
+@version        1.1.3
 @description    Google... AdGuardHome style.
 @preprocessor   stylus
 @author         nsabbatini
 @license        WTFPL
 @updateURL      https://github.com/nsabbatini/userstyles/raw/main/gruvbox-AdGuardHome.user.styl
 @homepageURL    https://github.com/nsabbatini/userstyles
-@var color gruv-bg0_h        "Background 0h" #1d2021
-@var color gruv-bg0_s        "Background 0s" #32302f
 
-@var color gruv-bg0          "Background 0" #282828
-@var color gruv-bg1          "Background 1" #3c3836
-@var color gruv-bg2          "Background 2" #504945
-@var color gruv-bg3          "Background 3" #665c54
-@var color gruv-bg4          "Background 4" #7c6f64
+@var color gruv-bg0_h        "Background 0h"       #1d2021
+@var color gruv-bg0_s        "Background 0s"       #32302f
+
+@var color gruv-bg0          "Background 0"        #282828
+@var color gruv-bg1          "Background 1"        #3c3836
+@var color gruv-bg2          "Background 2"        #504945
+@var color gruv-bg3          "Background 3"        #665c54
+@var color gruv-bg4          "Background 4"        #7c6f64
 
 @var color gruv-fg0-ww       "Background 0 weaker" #fbf1c78a
 @var color gruv-fg0-w        "Background 0 weak"   #fbf1c7bd
 
-@var color gruv-fg0          "Foreground 0" #fbf1c7
-@var color gruv-fg1          "Foreground 1" #ebdbb2
-@var color gruv-fg2          "Foreground 2" #d5c4a1
-@var color gruv-fg3          "Foreground 3" #bdae93
-@var color gruv-fg4          "Foreground 4" #a89984
+@var color gruv-fg0          "Foreground 0"        #fbf1c7
+@var color gruv-fg1          "Foreground 1"        #ebdbb2
+@var color gruv-fg2          "Foreground 2"        #d5c4a1
+@var color gruv-fg3          "Foreground 3"        #bdae93
+@var color gruv-fg4          "Foreground 4"        #a89984
 
-@var color gruv-gray         "Gray"         #928374
+@var color gruv-gray         "Gray"                #928374
 
-@var color gruv-red-light    "Red Light"    #fb4934
-@var color gruv-red-dark     "Red Dark"     #cc241d
+@var color gruv-red-light    "Red Light"           #fb4934
+@var color gruv-red-dark     "Red Dark"            #cc241d
 
-@var color gruv-orange-light "Orange Light" #fe8019
-@var color gruv-orange-dark  "Orange Dark"  #d65d0e
+@var color gruv-orange-light "Orange Light"        #fe8019
+@var color gruv-orange-dark  "Orange Dark"         #d65d0e
 
-@var color gruv-yellow-light "Yellow Light" #fabd2f
-@var color gruv-yellow-dark  "Yellow Dark"  #d79921
+@var color gruv-yellow-light "Yellow Light"        #fabd2f
+@var color gruv-yellow-dark  "Yellow Dark"         #d79921
 
-@var color gruv-green-light  "Green Light"  #b8bb26
-@var color gruv-green-dark   "Green Dark"   #98971a
+@var color gruv-green-light  "Green Light"         #b8bb26
+@var color gruv-green-dark   "Green Dark"          #98971a
 
-@var color gruv-aqua-light   "Aqua Light"   #8ec07c
-@var color gruv-aqua-dark    "Aqua Dark"    #689d6a
+@var color gruv-aqua-light   "Aqua Light"          #8ec07c
+@var color gruv-aqua-dark    "Aqua Dark"           #689d6a
 
 @var color gruv-aqua-light-t "Aqua Light Transp." #8ec07c4f
 @var color gruv-aqua-dark-t  "Aqua Dark Transp."  #689d6a59
 
-@var color gruv-blue-light   "Blue Light"   #83a598
-@var color gruv-blue-dark    "Blue Dark"    #458588
+@var color gruv-blue-light   "Blue Light"         #83a598
+@var color gruv-blue-dark    "Blue Dark"          #458588
 
-@var color gruv-purple-light "Purple Light" #d3869b
-@var color gruv-purple-dark  "Purple Dark"  #b16286
+@var color gruv-purple-light "Purple Light"       #d3869b
+@var color gruv-purple-dark  "Purple Dark"        #b16286
 
 ==/UserStyle== */
+
 
 @-moz-document url-prefix("http://pato/#"), url-prefix("http://pato.localdomain/#") {
 
     body {
-        color: gruv-fg0-w !important;
+        color: gruv-fg0-ww !important;
         background-color: gruv-bg0_h !important;
     }
 
@@ -75,16 +77,8 @@
         background: gruv-bg1 !important;
     }
 
-    .footer a:not(.btn) {
-        color: gruv-fg0-w !important;
-    }
-
     .page-title {
         color: gruv-fg1 !important;
-    }
-
-    .page-subtitle {
-        color: gruv-fg0-w !important;
     }
 
     a {
@@ -146,13 +140,25 @@
         border-color: gruv-aqua-dark !important;
     }
 
+    .btn-gray {
+        color: gruv-gray !important;
+        background-color: transparent !important;
+        border-color: gruv-gray !important;
+    }
+
+    .btn-gray:hover {
+        color: red !important;
+        background-color: transparent !important;
+        border-color: red !important;
+    }
+
     .dropdown-menu {
-        color: gruv-fg0-w !important;
+        color: gruv-fg0-ww !important;
         background-color: gruv-bg0 !important;
     }
 
     .custom-select {
-        color: gruv-fg0-w !important;
+        color: gruv-fg0-ww !important;
         background-color: gruv-bg0_h !important;
         border: 1px solid gruv-bg2 !important;
     }
@@ -189,11 +195,6 @@
         color: gruv-aqua-light !important;
     }
 
-    .card-title small,
-    .card-subtitle {
-        color: gruv-fg0-w !important;
-    }
-
     .dropdown-item {
         color: gruv-fg0-w !important;
     }
@@ -222,11 +223,11 @@
         color: gruv-gray !important;
     }
 
-    .checkbox__label-subtitle {
-        color: gruv-fg0-ww !important;
+    .page-subtitle, .card-title, .card label, .tab__title, .logs__cell--header__container, .guide__title, .footer a:not(.btn), .checkbox__label-title, .form__label--with-desc {
+        color: gruv-fg0-w !important;
     }
 
-    .form__desc {
+    .logs__text, .form__desc, .card-subtitle, .checkbox__label-subtitle {
         color: gruv-fg0-ww !important;
     }
 
@@ -253,10 +254,6 @@
 
     .tooltip-custom__container {
         background-color: gruv-bg0 !important;
-    }
-
-    .logs__text:not(a) {
-        color: gruv-fg0-ww !important;
     }
 
     .logs__text--link {
@@ -333,7 +330,9 @@
     ::-webkit-scrollbar-thumb:hover {
         background: gruv-bg4 !important;
     }
+
     .tab__control {
         color: gruv-aqua-dark !important;
     }
 }
+
