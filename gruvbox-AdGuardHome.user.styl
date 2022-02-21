@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GruvBox - AdGuardHome
 @namespace      github.com/nsabbatini/userstyles
-@version        1.0.0
+@version        1.1.0
 @description    Google... AdGuardHome style.
 @preprocessor   stylus
 @author         nsabbatini
@@ -43,6 +43,9 @@
 @var color gruv-aqua-light   "Aqua Light"   #8ec07c
 @var color gruv-aqua-dark    "Aqua Dark"    #689d6a
 
+@var color gruv-aqua-light-t "Aqua Light Transp." #8ec07c4f
+@var color gruv-aqua-dark-t  "Aqua Dark Transp."  #689d6a59
+
 @var color gruv-blue-light   "Blue Light"   #83a598
 @var color gruv-blue-dark    "Blue Dark"    #458588
 
@@ -54,54 +57,54 @@
 @-moz-document url-prefix("http://pato/#"), url-prefix("http://pato.localdomain/#") {
 
     body {
-        color: gruv-fg2 !important;
-        background-color: gruv-bg0 !important;
+        color: gruv-fg0-w !important;
+        background-color: gruv-bg0_h !important;
     }
 
     .header {
         background:gruv-bg2 !important;
-        background-color: gruv-bg2 !important;
+        background-color: gruv-bg1 !important;
     }
 
     .mobile-menu {
-        background-color: gruv-bg2 !important;
+        background-color: gruv-bg1 !important;
     }
 
     .footer {
-        color: gruv-fg1 !important;
-        background: gruv-bg2 !important;
+        color: gruv-fg0-w !important;
+        background: gruv-bg1 !important;
     }
 
     .footer a:not(.btn) {
-        color: gruv-fg1 !important;
+        color: gruv-fg0-w !important;
     }
 
     .page-title {
-        color: gruv-fg3 !important;
-    }
-
-    .page-subtitle {
-        color: gruv-fg2 !important;
-    }
-
-    a {
         color: gruv-fg1 !important;
     }
 
+    .page-subtitle {
+        color: gruv-fg0-w !important;
+    }
+
+    a {
+        color: gruv-aqua-dark !important;
+    }
+
     a:hover {
-        color: gruv-fg0 !important;
+        color: gruv-aqua-light!important;
     }
 
     .form-control {
-        color:gruv-fg2 !important;
-        background-color: gruv-bg0 !important;
-        border: 1px solid gruv-bg3 !important;
+        color:gruv-fg0-w !important;
+        background-color: gruv-bg0_h !important;
+        border: 1px solid gruv-bg2 !important;
     }
 
     .form-control:focus {
-        color: gruv-fg2 !important;
+        color: gruv-fg0-w !important;
         background-color: gruv-bg0_h !important;
-        border-color: #1991eb !important;
+        border-color: gruv-bg3 !important;
     }
 
     .form-control::placeholder {
@@ -110,66 +113,101 @@
 
     .form-control:disabled,
     .form-control[readonly] {
-        background-color: gruv-bg1 !important;
+        background-color: gruv-bg0 !important;
     }
 
-    .btn-success {
-        color: #fff !important;
-        background-color: gruv-aqua-dark !important;
+    .btn-primary, .btn-secondary, .btn-success {
+        color: gruv-aqua-dark !important;
+        background-color: gruv-aqua-dark-t !important;
         border-color: gruv-aqua-dark !important;
     }
 
-    .btn-success.disabled,
+    .btn-primary:hover, .btn-secondary:hover, .btn-success:hover {
+        color: gruv-aqua-light !important;
+        border-color: gruv-aqua-light !important;
+        background-color: gruv-aqua-light-t !important;
+    }
+
     .btn-success:disabled {
-        color: #fff !important;
-        background-color: gruv-aqua-dark !important;
+        color: gruv-aqua-dark !important;
+        background-color: transparent !important;
         border-color: gruv-aqua-dark !important;
     }
 
-    .btn-secondary {
-        color: #fff !important;
-        background-color: gruv-aqua-dark !important;
+    .btn-outline-success:disabled {
+        color: gruv-aqua-dark !important;
+        border-color: gruv-aqua-dark !important;
     }
 
-    .btn-secondary:hover {
-        color: gruv-fg1 !important;
-        background-color: gruv-aqua-light !important;
+    .btn-outline-primary, .btn-outline-secondary {
+        color: gruv-aqua-dark !important;
+        border-color: gruv-aqua-dark !important;
+    }
+
+    .btn-outline-primary:hover, .btn-outline-secondary:hover {
+        color: gruv-aqua-light !important;
+        border-color: gruv-aqua-light !important;
+        background-color: gruv-aqua-light-t !important;
     }
 
     .dropdown-menu {
-        color: gruv-fg1 !important;
+        color: gruv-fg0-w !important;
         background-color: gruv-bg0 !important;
     }
 
     .custom-select {
-        color: gruv-fg2 !important;
-        background-color: gruv-bg0 !important;
+        color: gruv-fg0-w !important;
+        background-color: gruv-bg0_h !important;
+        border: 1px solid gruv-bg2 !important;
     }
 
-    .custom-select:focus {
-        border-color:gruv-fg4 !important;
+    .custom-select:hover, .custom-select:focus {
+        border-color: gruv-bg4 !important;
     }
 
     .card {
-        background-color: gruv-bg1 !important;
+        background-color: gruv-bg0 !important;
+        border: 1px solid gruv-bg1 !important;
+    }
+
+    .card-header {
+        border-bottom: 1px solid gruv-bg1 !important;
     }
 
     .nav-tabs {
-        color: gruv-yellow-dark !important;
+        color: gruv-aqua-dark !important;
     }
 
     .nav-tabs .nav-link:hover:not(.disabled) {
-        border-color: gruv-yellow-light !important;
-        color: gruv-yellow-light !important;
+        border-color: gruv-aqua-light !important;
+        color: gruv-aqua-light !important;
+    }
+
+    .nav-tabs .nav-link.active {
+        border-color: gruv-aqua-light !important;
+        color: gruv-aqua-light !important;
+    }
+
+    .nav-tabs .nav-link.active:hover {
+        border-color: gruv-aqua-light !important;
+        color: gruv-aqua-light !important;
     }
 
     .card-title small,
     .card-subtitle {
-        color: gruv-fg2 !important;
+        color: gruv-fg0-w !important;
     }
 
     .dropdown-item {
-        color: gruv-fg2 !important;
+        color: gruv-fg0-w !important;
+    }
+
+    .dropdown-item:hover {
+        background-color: gruv-aqua-dark-t !important;
+    }
+
+    .dropdown-item.active {
+        background-color: gruv-aqua-light-t !important;
     }
 
     .custom-switch-indicator {
@@ -178,16 +216,6 @@
 
     .custom-switch-indicator:before {
         background: gruv-aqua-dark !important;
-    }
-
-    .nav-tabs .nav-link.active {
-        border-color: gruv-yellow-light !important;
-        color: gruv-yellow-light !important;
-    }
-
-    .nav-tabs .nav-link.active:hover {
-        border-color: gruv-orange-light !important;
-        color: gruv-orange-light !important;
     }
 
     .tooltip-container {
@@ -199,11 +227,11 @@
     }
 
     .checkbox__label-subtitle {
-        color: gruv-fg2 !important;
+        color: gruv-fg0-ww !important;
     }
 
     .form__desc {
-        color: gruv-fg2 !important;
+        color: gruv-fg0-ww !important;
     }
 
     .service {
@@ -214,25 +242,46 @@
         color: gruv-aqua-light !important;
     }
 
+    .icon--green {
+        color: gruv-aqua-light !important;
+    }
+
+    .icon--disabled {
+        color: gruv-aqua-light-t !important;
+    }
+
+    .icon--selected {
+        background-color: gruv-aqua-dark-t !important;
+        border: solid 1px gruv-bg3 !important;
+    }
+
     .tooltip-custom__container {
         background-color: gruv-bg0 !important;
     }
 
-    .logs__text {
-        color: gruv-fg1 !important;
+    .logs__text:not(a) {
+        color: gruv-fg0-ww !important;
     }
 
     .logs__text--link {
-        color: gruv-fg1 !important;
+        color: gruv-aqua-dark !important;
     }
 
     .logs__text--link:hover,
     .logs__text--link:focus {
-        color: gruv-fg0 !important;
+        color: gruv-aqua-light !important;
+    }
+
+    .tooltip-container {
+        border: 1px solid gruv-bg3 !important;
     }
 
     .tooltip-custom__container .button-action--arrow-option:not(:disabled):hover {
         background: gruv-bg0 !important;
+    }
+
+    .logs__table .logs__row {
+        border-bottom: 1px solid gruv-bg2 !important;
     }
 
     .logs__row--red {
@@ -240,28 +289,55 @@
     }
 
     .logs__row--white {
-        background-color: gruv-bg1 !important;
+        background-color: gruv-bg0 !important;
     }
 
     .logs__table {
-        background-color: gruv-bg1 !important;
+        background-color: gruv-bg0 !important;
+    }
+
+    .ReactTable {
+        border: 1px solid gruv-bg1 !important;
     }
 
     .ReactTable .-pagination input, .ReactTable .-pagination select {
         background: gruv-bg0 !important;
-        color: gruv-fg2 !important;
+        color: gruv-fg0-w !important;
     }
 
     .ReactTable .-pagination .-btn {
-        color: gruv-fg1 !important;
-        background: gruv-bg3 !important;
+        color: gruv-fg0-w !important;
+        background: gruv-bg0_h !important;
+        border: 1px solid gruv-bg1 !important;
     }
 
     .ReactTable .rt-noData {
-        color: gruv-fg2 !important;
+        color: gruv-fg0-w !important;
+        background-color: gruv-bg0_h !important;
     }
 
+    .ReactTable .rt-tbody .rt-tr-group {
+        border-bottom: 1px solid gruv-bg1 !important;
+    }
     .counters__row {
-        border-top: 1px hidden !important;
+        border-top: 1px solid gruv-bg1 !important;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: gruv-bg0_h !important;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: gruv-bg3 !important;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: gruv-bg4 !important;
+    }
+    .tab__control {
+        color: gruv-aqua-dark !important;
     }
 }
