@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GruvBox - AdGuardHome
 @namespace      github.com/nsabbatini/userstyles
-@version        1.1.3
+@version        1.1.4
 @description    Google... AdGuardHome style.
 @preprocessor   stylus
 @author         nsabbatini
@@ -215,10 +215,6 @@
         background: gruv-aqua-dark !important;
     }
 
-    .tooltip-container {
-      background-color: gruv-bg0 !important;
-    }
-
     .checkbox__input:disabled + .checkbox__label {
         color: gruv-gray !important;
     }
@@ -249,11 +245,12 @@
 
     .icon--selected {
         background-color: gruv-aqua-dark-t !important;
-        border: solid 1px gruv-bg3 !important;
+        border: solid 1px gruv-bg2 !important;
     }
 
-    .tooltip-custom__container {
+    .tooltip-container, .tooltip-custom__container {
         background-color: gruv-bg0 !important;
+        border: 1px solid gruv-bg2 !important;
     }
 
     .logs__text--link {
@@ -265,11 +262,7 @@
         color: gruv-aqua-light !important;
     }
 
-    .tooltip-container {
-        border: 1px solid gruv-bg3 !important;
-    }
-
-    .tooltip-custom__container .button-action--arrow-option:not(:disabled):hover {
+    .button-action--arrow-option:not(:disabled):hover {
         background: gruv-bg0 !important;
     }
 
