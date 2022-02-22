@@ -1,87 +1,138 @@
 /* ==UserStyle==
 @name           GruvBox - Youtube
 @namespace      github.com/nsabbatini/userstyles
-@version        1.0.0
+@version        1.0.1
 @description    Youtube... Gruvbox style.
 @preprocessor   stylus
 @author         nsabbatini
 @license        WTFPL
 @updateURL      https://github.com/nsabbatini/userstyles/raw/main/gruvbox-youtube.user.styl
 @homepageURL    https://github.com/nsabbatini/userstyles
-@var color color-text           "Text"                  #FBF1C7
-@var color color-text-dark      "Text Dark"             #A89984
-@var color color-back           "Background"            #282828
-@var color color-back-dark      "Background Dark"       #1D2021
-@var color color-back-light     "Background Bright"     #3C3836
-@var color color-highlight      "Highlight"             #FB4934
-@var color color-notification   "Notification"          #B8BB26
-@var color color-things         "Things that aren't text" "#8ec07c"
-@var color color-things-dark    "Things that aren't text darken" "#689d6a"
-@var color color-things-contrast "Things contrast" "#fe8019"
-@var color color-things-contrast-dark "Things contrast" "#d65d0e"
-@var color color-things-contrast2 "Things contrast" "#83a598"
-@var color color-things-contrast2-dark "Things contrast" "#458588"
-@var color color-things-contrast3 "Things contrast" "#fabd2f"
-@var color color-things-contrast3-dark "Things contrast" "#d79921"
-@var color color-things-contrast4 "Things contrast" "#b8bb26"
-@var color color-things-contrast4-dark "Things contrast" "#98971a"
-@var color color-things-contrast5 "Things contrast" "#d3869b"
-@var color color-things-contrast5-dark "Things contrast" "#b16286"
+
+@var color gruv-bg0_h        "Background 0h"       #1d2021
+@var color gruv-bg0_s        "Background 0s"       #32302f
+
+@var color gruv-bg0          "Background 0"        #282828
+@var color gruv-bg1          "Background 1"        #3c3836
+@var color gruv-bg2          "Background 2"        #504945
+@var color gruv-bg3          "Background 3"        #665c54
+@var color gruv-bg4          "Background 4"        #7c6f64
+
+@var color gruv-fg0-ww       "Background 0 weaker" #fbf1c78a
+@var color gruv-fg0-w        "Background 0 weak"   #fbf1c7bd
+
+@var color gruv-fg0          "Foreground 0"        #fbf1c7
+@var color gruv-fg1          "Foreground 1"        #ebdbb2
+@var color gruv-fg2          "Foreground 2"        #d5c4a1
+@var color gruv-fg3          "Foreground 3"        #bdae93
+@var color gruv-fg4          "Foreground 4"        #a89984
+
+@var color gruv-gray         "Gray"                #928374
+
+@var color gruv-red-light    "Red Light"           #fb4934
+@var color gruv-red-dark     "Red Dark"            #cc241d
+
+@var color gruv-orange-light "Orange Light"        #fe8019
+@var color gruv-orange-dark  "Orange Dark"         #d65d0e
+
+@var color gruv-yellow-light "Yellow Light"        #fabd2f
+@var color gruv-yellow-dark  "Yellow Dark"         #d79921
+
+@var color gruv-green-light  "Green Light"         #b8bb26
+@var color gruv-green-dark   "Green Dark"          #98971a
+
+@var color gruv-aqua-light   "Aqua Light"          #8ec07c
+@var color gruv-aqua-dark    "Aqua Dark"           #689d6a
+
+@var color gruv-aqua-light-t "Aqua Light Transp." #8ec07c4f
+@var color gruv-aqua-dark-t  "Aqua Dark Transp."  #689d6a59
+
+@var color gruv-blue-light   "Blue Light"         #83a598
+@var color gruv-blue-dark    "Blue Dark"          #458588
+
+@var color gruv-purple-light "Purple Light"       #d3869b
+@var color gruv-purple-dark  "Purple Dark"        #b16286
+
 ==/UserStyle== */
 
-@-moz-document domain("youtube.com")       
+@-moz-document domain("youtube.com") {
     
     // video description
-    body, ytd-app, ytd-masthead, #guide-content.ytd-app, #columns.ytd-watch-flexy, ytd-browse[page-subtype="channels"], .content.ytd-video-secondary-info-renderer, ytd-app[is-watch-page], ytd-watch-flexy
-        color: color-text
-        background: color-back
-    
+    body,
+    ytd-app,
+    ytd-masthead,
+    #guide-content.ytd-app,
+    #columns.ytd-watch-flexy,
+    ytd-browse[page-subtype="channels"],
+    .content.ytd-video-secondary-info-renderer,
+    ytd-app[is-watch-page],
+    ytd-watch-flexy {
+        color: gruv-fg0-ww !important;
+        background: gruv-bg0_h !important;
+    }
             
     // video title by side bar and description "show more"
-    a, h3.ytd-compact-video-renderer, .more-button.ytd-video-secondary-info-renderer, .less-button.ytd-video-secondary-info-renderer, .title.ytd-guide-entry-renderer
-        color: color-things
-
+    a,
+    h3.ytd-compact-video-renderer,
+    .more-button.ytd-video-secondary-info-renderer,
+    .less-button.ytd-video-secondary-info-renderer,
+    .title.ytd-guide-entry-renderer {
+        color: gruv-fg0-w !important;
+    }
         
     // title and comment count
-    #title.ytd-shelf-renderer, .title.ytd-video-primary-info-renderer, #upnext.ytd-compact-autoplay-renderer, yt-formatted-string.ytd-comments-header-renderer, #channel-title.ytd-c4-tabbed-header-renderer
-        color: color-things
+    #title.ytd-shelf-renderer,
+    .title.ytd-video-primary-info-renderer,
+    #upnext.ytd-compact-autoplay-renderer,
+    yt-formatted-string.ytd-comments-header-renderer,
+    #channel-title.ytd-c4-tabbed-header-renderer {
+        color: gruv-fg0-w !important;
+    }
 
     // comment "days ago"
-    yt-formatted-string[has-link-only_]:not([force-default-style]) a.yt-simple-endpoint.yt-formatted-string
-        color: color-text-dark
+    yt-formatted-string[has-link-only_]:not([force-default-style]) a.yt-simple-endpoint.yt-formatted-string {
+        color: gruv-fg0-w !important;
+    }
     
     // comment text
-    #content-text.ytd-comment-renderer
-        color: color-text
+    #content-text.ytd-comment-renderer {
+        color: gruv-fg0-ww !important;
+    }
     
     // author text    
-    #author-text.yt-simple-endpoint.ytd-comment-renderer
-        color: color-things
+    #author-text.yt-simple-endpoint.ytd-comment-renderer {
+        color: color-fg0-ww !important;
+    }
+
     // youtube icon, dislike, like, checkmark, love, "view replies" arrow and literaly every icon
     // if you want to change something, change this one first
-    .yt-icon
-        color: color-text-dark
-    
+    .yt-icon {
+        color: gruv-fg0-ww !important;
+    }
         
     // "add a public comment"
-    #simplebox-placeholder.ytd-comment-simplebox-renderer
-        color: color-text-dark
+    #simplebox-placeholder.ytd-comment-simplebox-renderer {
+        color: gruv-fg0-ww !important;
+    }
         
     // like number    
-    #action-buttons.ytd-comment-renderer
-        color: color-text
+    #action-buttons.ytd-comment-renderer {
+        color: gruv-fg0-w !important;
+    }
         
-    html:not(.style-scope)[dark], :not(.style-scope)[dark]
+    html:not(.style-scope)[dark],
+    :not(.style-scope)[dark] {
         // links and "view more comment" and "Reply" button
-        --yt-spec-call-to-action: color-things-contrast2
+        --yt-spec-call-to-action: color-fg0-w !important;
         
         // secondary text like sub count, views, date, and "reply button"
-        --yt-spec-text-secondary: color-text-dark
+        --yt-spec-text-secondary: gruv-fg0-ww !important;
         
         // "share" "save", "like count", "sort by"
-        --yt-spec-text-primary: color-text
+        --yt-spec-text-primary: gruv-fg0-w !important;
         
         // sub button
         --yt-spec-brand-button-background: color-things-contrast
-        --yt-spec-brand-link-text: color-text
-        
+        --yt-spec-brand-link-text: gruv-fg0-w !important;
+    }
+}

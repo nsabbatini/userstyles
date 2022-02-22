@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GruvBox - AdGuardHome
 @namespace      github.com/nsabbatini/userstyles
-@version        1.1.4
+@version        1.1.5
 @description    Google... AdGuardHome style.
 @preprocessor   stylus
 @author         nsabbatini
@@ -309,17 +309,18 @@
         border-top: 1px solid gruv-bg1 !important;
     }
 
-    /* Track */
+    ::-webkit-scrollbar              {
+        background: gruv-bg1 !important;
+    }
+
     ::-webkit-scrollbar-track {
         background: gruv-bg0_h !important;
     }
 
-    /* Handle */
     ::-webkit-scrollbar-thumb {
         background: gruv-bg3 !important;
     }
 
-    /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
         background: gruv-bg4 !important;
     }
