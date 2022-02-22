@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           GruvBox - Youtube
 @namespace      github.com/nsabbatini/userstyles
-@version        1.0.1
+@version        1.0.2
 @description    Youtube... Gruvbox style.
 @preprocessor   stylus
 @author         nsabbatini
@@ -57,7 +57,6 @@
 
 @-moz-document domain("youtube.com") {
     
-    // video description
     body,
     ytd-app,
     ytd-masthead,
@@ -71,7 +70,6 @@
         background: gruv-bg0_h !important;
     }
             
-    // video title by side bar and description "show more"
     a,
     h3.ytd-compact-video-renderer,
     .more-button.ytd-video-secondary-info-renderer,
@@ -80,59 +78,46 @@
         color: gruv-fg0-w !important;
     }
         
-    // title and comment count
     #title.ytd-shelf-renderer,
     .title.ytd-video-primary-info-renderer,
     #upnext.ytd-compact-autoplay-renderer,
     yt-formatted-string.ytd-comments-header-renderer,
-    #channel-title.ytd-c4-tabbed-header-renderer {
+    #channel-title.ytd-c4-tabbed-header-renderer,
+    #guide-section-title.ytd-guide-section-renderer {
         color: gruv-fg0-w !important;
     }
 
-    // comment "days ago"
     yt-formatted-string[has-link-only_]:not([force-default-style]) a.yt-simple-endpoint.yt-formatted-string {
         color: gruv-fg0-w !important;
     }
     
-    // comment text
     #content-text.ytd-comment-renderer {
         color: gruv-fg0-ww !important;
     }
     
-    // author text    
     #author-text.yt-simple-endpoint.ytd-comment-renderer {
         color: color-fg0-ww !important;
     }
 
-    // youtube icon, dislike, like, checkmark, love, "view replies" arrow and literaly every icon
-    // if you want to change something, change this one first
     .yt-icon {
         color: gruv-fg0-ww !important;
     }
         
-    // "add a public comment"
     #simplebox-placeholder.ytd-comment-simplebox-renderer {
         color: gruv-fg0-ww !important;
     }
         
-    // like number    
     #action-buttons.ytd-comment-renderer {
         color: gruv-fg0-w !important;
     }
         
     html:not(.style-scope)[dark],
     :not(.style-scope)[dark] {
-        // links and "view more comment" and "Reply" button
         --yt-spec-call-to-action: color-fg0-w !important;
-        
-        // secondary text like sub count, views, date, and "reply button"
         --yt-spec-text-secondary: gruv-fg0-ww !important;
-        
-        // "share" "save", "like count", "sort by"
         --yt-spec-text-primary: gruv-fg0-w !important;
-        
-        // sub button
-        --yt-spec-brand-button-background: color-things-contrast
+        --yt-spec-brand-button-background: gruv-fg0-w !important;
         --yt-spec-brand-link-text: gruv-fg0-w !important;
     }
 }
+
